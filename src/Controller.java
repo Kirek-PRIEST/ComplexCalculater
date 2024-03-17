@@ -1,4 +1,4 @@
-public class Contoller {
+public class Controller {
     private static double[] parts(String lex) {
         String[] parts = lex.substring(0, lex.length() - 1).split("(?<=\\d)");
         double[] result = new double[2];
@@ -8,7 +8,7 @@ public class Contoller {
         return result;
     }
     public String adding(String firstLex, String secondLex){
-        return Calculating.summ(parts(firstLex), parts(secondLex));
+        return Calculating.adding(parts(firstLex), parts(secondLex));
 
     }
     public String subtracting(String firstLex, String secondLex) {
@@ -17,8 +17,8 @@ public class Contoller {
     public String multiplication(String firstLex, String secondLex) {
         return Calculating.multiplication(parts(firstLex), parts(secondLex));
     }
-    public String division(String firstLex, String secondLex) {
-        return Calculating.division(parts(firstLex), parts(secondLex));
+    public String division(String firstLex, String secondLex, int numsAfterDot) {
+        return Calculating.division(parts(firstLex), parts(secondLex), numsAfterDot);
     }
 }
 
