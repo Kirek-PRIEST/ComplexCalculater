@@ -1,3 +1,8 @@
+package complexCalculator;
+
+import complexCalculator.Commands;
+import complexCalculator.ComplexNumber;
+import complexCalculator.Controller;
 
 import java.util.Arrays;
 import java.util.Scanner;
