@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="815a8064-89e5-4efd-81d4-55ebe6c4152f" name="Changes" comment="Доработано деление - спрашивает количество знаков после запятой.&#10;Нет ошибки при неправильно введённом действии">
-      <change afterPath="$PROJECT_DIR$/src/ComplexNumber.java" afterDir="false" />
+    <list default="true" id="815a8064-89e5-4efd-81d4-55ebe6c4152f" name="Changes" comment="Наведён небольшой порядок в файлах.">
+      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calculating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calculating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Starter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/complexCalculator/Starter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/complexCalculator/Starter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,11 +18,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -100,13 +102,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710707326807</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Переработан Calculating и передаваемые в него значения">
+      <option name="closed" value="true" />
+      <created>1710786139159</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710786139159</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Наведён небольшой порядок в файлах.">
+      <option name="closed" value="true" />
+      <created>1710786860987</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710786860987</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделано сложение и вычитание" />
     <MESSAGE value="Добавлены деление и умножение" />
     <MESSAGE value="Доработано деление - спрашивает количество знаков после запятой.&#10;Нет ошибки при неправильно введённом действии" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доработано деление - спрашивает количество знаков после запятой.&#10;Нет ошибки при неправильно введённом действии" />
+    <MESSAGE value="Переработан Calculating и передаваемые в него значения" />
+    <MESSAGE value="Наведён небольшой порядок в файлах." />
+    <option name="LAST_COMMIT_MESSAGE" value="Наведён небольшой порядок в файлах." />
   </component>
 </project>

@@ -1,14 +1,9 @@
 package complexCalculator;
 
-import complexCalculator.Commands;
-import complexCalculator.ComplexNumber;
-import complexCalculator.Controller;
-
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Starter {
-
 
     public void run() {
         Commands com;
@@ -20,8 +15,8 @@ public class Starter {
                 action = prompt("Введите действие, которое хотите выполить с мнимыми числами").toUpperCase();
             }
             com = Commands.valueOf(action.toUpperCase());
-            ComplexNumber num1 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть числа")), Double.parseDouble(prompt("Введите мнимую часть числа")));
-            ComplexNumber num2 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть числа")), Double.parseDouble(prompt("Введите мнимую часть числа")));
+            ComplexNumber num1 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть первого числа")), Double.parseDouble(prompt("Введите мнимую часть первого числа")));
+            ComplexNumber num2 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть второго числа")), Double.parseDouble(prompt("Введите мнимую часть второго числа")));
             Controller controller = new Controller();
             switch (com) {
                 case ADD:
@@ -34,7 +29,6 @@ public class Starter {
                     System.out.println(controller.multiplication(num1, num2));
                     break;
                 case DIV:
-
                     System.out.println(controller.division(num1, num2));
                     break;
             }
@@ -53,4 +47,15 @@ public class Starter {
         System.out.println(message);
         return scanner.nextLine();
     }
+    private static boolean isNumeric(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+        }
 }
