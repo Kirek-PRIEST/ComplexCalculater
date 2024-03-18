@@ -9,43 +9,41 @@ public class Starter {
         Commands com;
         while (true) {
             String action = "";
-            while (!isContain(action)){
+            while (!isContain(action)) {
                 System.out.println("Список доступных действий:");
                 System.out.println(Arrays.toString(Commands.values()));
                 action = prompt("Введите действие, которое хотите выполить с мнимыми числами").toUpperCase();
             }
             com = Commands.valueOf(action.toUpperCase());
-            String firstLex = prompt("Введите первое комплексное число (в формате a+bi):");
-            String secondLex = prompt("Введите второе комплексное число (в формате a+bi): ");
-            String numsAfterDot = prompt("Введите количество символов после запятой");
+            ComplexNumber num1 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть числа")), Double.parseDouble(prompt("Введите мнимую часть числа")));
+            ComplexNumber num2 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть числа")), Double.parseDouble(prompt("Введите мнимую часть числа")));
             Controller controller = new Controller();
-
             switch (com) {
                 case ADD:
-                    System.out.println(controller.adding(firstLex, secondLex));
+                    System.out.println(controller.adding(num1, num2));
                     break;
                 case SUB:
-                    System.out.println(controller.subtracting(firstLex, secondLex));
+                    System.out.println(controller.subtracting(num1, num2));
                     break;
                 case MUL:
-                    System.out.println(controller.multiplication(firstLex, secondLex));
+                    System.out.println(controller.multiplication(num1, num2));
                     break;
                 case DIV:
 
-                    System.out.println(controller.division(firstLex, secondLex, Integer.parseInt(numsAfterDot)));
+                    System.out.println(controller.division(num1, num2));
                     break;
             }
-
         }
     }
-    private static boolean isContain(String s){
+
+    private static boolean isContain(String s) {
         for (Commands c : Commands.values()) {
             if (c.name().equals(s)) return true;
         }
         return false;
     }
 
-    private String prompt(String message) {
+    String prompt(String message) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
         return scanner.nextLine();
