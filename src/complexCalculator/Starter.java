@@ -18,18 +18,19 @@ public class Starter {
             ComplexNumber num1 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть первого числа")), Double.parseDouble(prompt("Введите мнимую часть первого числа")));
             ComplexNumber num2 = new ComplexNumber(Double.parseDouble(prompt("Введите вещесвенную часть второго числа")), Double.parseDouble(prompt("Введите мнимую часть второго числа")));
             Controller controller = new Controller();
+            int decimal = Integer.parseInt(prompt("Введите количество символов после запятой"));
             switch (com) {
                 case ADD:
-                    System.out.println(controller.adding(num1, num2));
+                    controller.adding(num1, num2, decimal);
                     break;
                 case SUB:
-                    System.out.println(controller.subtracting(num1, num2));
+                    controller.subtracting(num1, num2, decimal);
                     break;
                 case MUL:
-                    System.out.println(controller.multiplication(num1, num2));
+                    controller.multiplication(num1, num2, decimal);
                     break;
                 case DIV:
-                    System.out.println(controller.division(num1, num2));
+                    controller.division(num1, num2, decimal);
                     break;
             }
         }
@@ -47,15 +48,15 @@ public class Starter {
         System.out.println(message);
         return scanner.nextLine();
     }
-    private static boolean isNumeric(String strNum) {
-        if (strNum == null) {
-            return false;
-        }
-        try {
-            double d = Double.parseDouble(strNum);
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-        return true;
-        }
+//    private static boolean isNumeric(String strNum) {
+//        if (strNum == null) {
+//            return false;
+//        }
+//        try {
+//            double d = Double.parseDouble(strNum);
+//        } catch (NumberFormatException nfe) {
+//            return false;
+//        }
+//        return true;
+//        }
 }

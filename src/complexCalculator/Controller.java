@@ -1,24 +1,28 @@
 package complexCalculator;
 
-import java.util.Scanner;
+import complexCalculator.calculate.*;
 
 public class Controller {
-    public String adding(ComplexNumber number1, ComplexNumber number2){
-        return Calculating.adding(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), Integer.parseInt(prompt()));
+    public void adding(ComplexNumber number1, ComplexNumber number2, int decimal) {
+        Calculating calculating = new Add(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+
     }
-    public String subtracting(ComplexNumber number1, ComplexNumber number2) {
-        return Calculating.subtraction(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), Integer.parseInt(prompt()));
+
+    public void subtracting(ComplexNumber number1, ComplexNumber number2, int decimal) {
+        Calculating calculating = new Subtraction(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
     }
-    public String multiplication(ComplexNumber number1, ComplexNumber number2) {
-        return Calculating.multiplication(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), Integer.parseInt(prompt()));
+
+    public void multiplication(ComplexNumber number1, ComplexNumber number2, int decimal) {
+        Calculating calculating = new Multiplication(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
     }
-    public String division(ComplexNumber number1, ComplexNumber number2) {
-        return Calculating.division(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), Integer.parseInt(prompt()));
+
+    public void division(ComplexNumber number1, ComplexNumber number2, int decimal) {
+        Calculating calculating = new Division(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
     }
-    String prompt() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите количество символов после запятой");
-        return scanner.nextLine();
-    }
+
 }
 
