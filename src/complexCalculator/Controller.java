@@ -2,26 +2,27 @@ package complexCalculator;
 
 import complexCalculator.calculate.*;
 
+import java.lang.reflect.Type;
+
 public class Controller {
-    public void adding(ComplexNumber number1, ComplexNumber number2, int decimal) {
-        Calculating calculating = new Add(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
-        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
-
+    public double[] adding(ComplexNumber number1, ComplexNumber number2) {
+        Calculating calculating = new Add();
+        return calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag());
     }
 
-    public void subtracting(ComplexNumber number1, ComplexNumber number2, int decimal) {
-        Calculating calculating = new Subtraction(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
-        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+    public double[] subtracting(ComplexNumber number1, ComplexNumber number2) {
+        Calculating calculating = new Subtraction();
+        return calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag());
     }
 
-    public void multiplication(ComplexNumber number1, ComplexNumber number2, int decimal) {
-        Calculating calculating = new Multiplication(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
-        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+    public double[] multiplication(ComplexNumber number1, ComplexNumber number2) {
+        Calculating calculating = new Multiplication();
+        return calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag());
     }
 
-    public void division(ComplexNumber number1, ComplexNumber number2, int decimal) {
-        Calculating calculating = new Division(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
-        calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag(), decimal);
+    public double[] division(ComplexNumber number1, ComplexNumber number2) {
+        Calculating calculating = new Division();
+        return calculating.operation(number1.getReal(), number2.getReal(), number1.getImag(), number2.getImag());
     }
 
 }
